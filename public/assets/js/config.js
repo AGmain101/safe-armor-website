@@ -2,39 +2,45 @@
    SAFE ARMOR — SITE CONFIGURATION
    -------------------------------------------------------------------------
    Every company detail shown on the website lives in this one file.
-   Replace the placeholder values (marked TODO) and every page updates.
+   Change a value here and every page updates.
    Leave a value as "" to hide it where the site supports hiding.
+
+   Public details only. Kept OFF the website on purpose:
+   - TIN and the trading licence (Business Profile only)
+   - directors' personal phone numbers and personal email addresses
    ========================================================================= */
 window.SAFE_ARMOR = {
   company: {
     name: "Safe Armor PPE Supplies UG Ltd",
     shortName: "Safe Armor",
     tagline: "Your Safety, Our Priority",
-    established: "20XX",                 // TODO: year of incorporation
-    registrationNo: "XXXXXXXXXXXX",      // TODO: certificate of incorporation no.
-    tin: "XXXXXXXXXX",                   // TODO: Tax Identification Number
-    headOffice: "Town / City, Uganda"    // TODO
+    established: "2024",
+    incorporated: "18 October 2024",
+    registrationNo: "80034866229437",
+    headOffice: "Bugolobi, Kampala, Uganda",
+    market: "Public, private and NGO sectors",
+    areasServed: "Kampala, Jinja, Mbarara, Gulu and Lira"
   },
 
   contact: {
-    phone: "+256 700 000 000",           // TODO: office telephone (display)
-    phoneHref: "+256700000000",          // TODO: same number, no spaces
-    mobile: "+256 700 000 000",          // TODO: mobile / WhatsApp (display)
-    whatsapp: "256700000000",            // TODO: WhatsApp number, digits only, with country code
-    email: "info@yourdomain.com",        // TODO: main email
-    address: "Plot No. 00, Street Name, Town / City, Uganda", // TODO
-    postal: "P.O. Box 0000, City, Uganda",                    // TODO
-    hours: "Monday – Friday · Hours to be confirmed",         // TODO
-    mapLink: ""                          // TODO: Google Maps share link (optional)
+    phone: "+256 774 025 481",           // office telephone (display)
+    phoneHref: "+256774025481",          // same number, no spaces
+    mobile: "+256 774 025 481",          // WhatsApp (display)
+    whatsapp: "256774025481",            // WhatsApp number, digits only, with country code
+    email: "info@safearmorug.com",       // main email
+    address: "Bugolobi, near Silver Springs Hotel, Kampala, Uganda",
+    postal: "P.O. Box 173721, Kampala, Uganda",
+    hours: "Monday – Saturday · 8:00 am – 6:00 pm",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Silver+Springs+Hotel+Bugolobi+Kampala"
   },
 
-  /* Five email addresses (Contact page directory). Rename labels freely. */
+  /* Five company email addresses (Contact page directory). */
   emails: [
-    { label: "General Enquiries",    address: "info@yourdomain.com" },
-    { label: "Sales & Quotations",   address: "sales@yourdomain.com" },
-    { label: "Orders & Procurement", address: "orders@yourdomain.com" },
-    { label: "Accounts & Finance",   address: "accounts@yourdomain.com" },
-    { label: "Directors’ Office",    address: "directors@yourdomain.com" }
+    { label: "General Enquiries",                   address: "info@safearmorug.com" },
+    { label: "Sales & Quotations",                  address: "sales@safearmorug.com" },
+    { label: "Accounts & Finance",                  address: "finance@safearmorug.com" },
+    { label: "Managing Director · Omara Daniel",    address: "omara.daniel@safearmorug.com" },
+    { label: "Client Relations · Nakabonye Fridah", address: "nakabonye.fridah@safearmorug.com" }
   ],
 
   /* Social links: leave "" to hide an icon. */
@@ -48,10 +54,33 @@ window.SAFE_ARMOR = {
 
   /* Board of Directors (About page). No photographs are used. */
   directors: [
-    { name: "Director’s Full Name", title: "Director", bio: "Profile to follow: qualifications, experience and role in the company." },
-    { name: "Director’s Full Name", title: "Director", bio: "Profile to follow: qualifications, experience and role in the company." }
+    {
+      name: "Omara Daniel",
+      title: "Managing Director",
+      bio: "Holds a Bachelor’s degree in Business Administration and brings over five years of experience across sales, finance and marketing.",
+      email: "omara.daniel@safearmorug.com"
+    },
+    {
+      name: "Nakabonye Fridah",
+      title: "Director & Secretary",
+      bio: "Relationship Manager, responsible for developing and maintaining long-term partnerships with clients through excellent customer service and support.",
+      email: "nakabonye.fridah@safearmorug.com"
+    }
   ],
 
-  /* Industries served (Home & About). Leave empty to hide the list. */
-  industries: []
+  /* Towns served (Home page). Leave empty to hide. */
+  areas: ["Kampala", "Jinja", "Mbarara", "Gulu", "Lira"],
+
+  /* Industries served (Home page). Leave empty to hide the list. */
+  industries: [
+    "Construction",
+    "Manufacturing",
+    "Mining & quarrying",
+    "Oil & gas",
+    "Energy & utilities",
+    "Agriculture & agro-processing",
+    "Transport & logistics",
+    "Security services",
+    "Government ministries & agencies"
+  ]
 };

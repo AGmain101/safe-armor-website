@@ -2,7 +2,8 @@
    SAFE ARMOR — PPE CATALOGUE
    -------------------------------------------------------------------------
    Categories and items shown on the PPE Range page, the Protection Map and
-   the home page. Edit names/descriptions, delete items you do not stock,
+   the home page. Items follow the Company Profile Information Form.
+   Edit names/descriptions, delete items you do not stock,
    or add new ones (give each item a unique id).
    image / focus / zoom choose which part of a photo is shown for a category.
    ========================================================================= */
@@ -14,7 +15,8 @@ window.SA_CATALOG = [
     art: "assets/img/illustrations/ppe-helmet.svg",
     items: [
       { id: "helmets", name: "Safety Helmets", desc: "Hard hats for construction, industrial and site work." },
-      { id: "helmet-visor", name: "Helmet & Visor Combinations", desc: "Safety helmets fitted with face visors and ear defenders." }
+      { id: "hats", name: "Hats", desc: "Work hats for outdoor and site work." },
+      { id: "bump-caps", name: "Bump Caps", desc: "Lightweight caps against bumps and minor knocks." }
     ]
   },
   {
@@ -35,8 +37,7 @@ window.SA_CATALOG = [
     art: "assets/img/illustrations/ppe-earmuffs.svg",
     items: [
       { id: "ear-muffs", name: "Ear Muffs", desc: "Over-ear defenders for high-noise environments." },
-      { id: "helmet-ear-muffs", name: "Helmet-Mounted Ear Muffs", desc: "Ear defenders that attach to safety helmets." },
-      { id: "ear-plugs", name: "Ear Plugs", desc: "Disposable and reusable in-ear protection." }
+      { id: "ear-plugs", name: "Ear Plugs", desc: "In-ear protection against harmful noise." }
     ]
   },
   {
@@ -45,20 +46,20 @@ window.SA_CATALOG = [
     image: "assets/img/photos/ppe-flatlay.webp", focus: "74% 54%", zoom: 2.4,
     art: "assets/img/illustrations/ppe-respirator.svg",
     items: [
-      { id: "dust-masks", name: "Disposable Dust Masks", desc: "Single-use masks against dust and airborne particles." },
-      { id: "half-mask", name: "Half-Mask Respirators", desc: "Reusable respirators with replaceable filter cartridges." },
-      { id: "filters", name: "Replacement Filters & Cartridges", desc: "Filters for reusable respirators." }
+      { id: "dust-masks", name: "Dust Masks", desc: "Masks against dust and airborne particles." },
+      { id: "respirators", name: "Respirators", desc: "Respirators against dust, fumes and airborne particles." },
+      { id: "filters", name: "Filters", desc: "Replacement filters for respirators." }
     ]
   },
   {
     id: "hand", no: "05", name: "Hand Protection", zone: "Hands",
-    protects: "Protection against cuts, abrasion and handling hazards.",
+    protects: "Protection against cuts, chemicals and handling hazards.",
     image: "assets/img/photos/gloves-eyewear-earmuffs.webp", focus: "50% 72%", zoom: 1.5,
     art: "assets/img/illustrations/ppe-gloves.svg",
     items: [
-      { id: "leather-gloves", name: "Leather Work Gloves", desc: "Durable gloves for handling and general site work." },
-      { id: "coated-gloves", name: "Coated Grip Gloves", desc: "Rubber- or nitrile-coated gloves for a secure grip." },
-      { id: "hivis-gloves", name: "High-Visibility Gloves", desc: "Bright gloves that keep hand signals visible." }
+      { id: "chemical-gloves", name: "Chemical-Resistant Gloves", desc: "Gloves for handling chemicals and liquids." },
+      { id: "heavy-duty-gloves", name: "Heavy-Duty Gloves", desc: "Tough gloves for handling and general site work." },
+      { id: "cut-gloves", name: "Cut-Resistant Gloves", desc: "Gloves that protect against cuts from sharp edges." }
     ]
   },
   {
@@ -67,20 +68,19 @@ window.SA_CATALOG = [
     image: "assets/img/photos/ppe-store-shelves.webp", focus: "62% 72%", zoom: 2.6,
     art: "assets/img/illustrations/ppe-boot.svg", artFirst: true,
     items: [
-      { id: "safety-boots", name: "Safety Boots", desc: "Protective boots for site and industrial work." },
+      { id: "safety-shoes", name: "Safety Shoes", desc: "Protective footwear for site and industrial work." },
       { id: "gumboots", name: "Gumboots", desc: "Waterproof boots for wet and muddy conditions." }
     ]
   },
   {
-    id: "hivis", no: "07", name: "High-Visibility Clothing", zone: "Body",
-    protects: "Keeps workers visible in low light and around moving vehicles.",
+    id: "hivis", no: "07", name: "Hi-Vis & Workwear", zone: "Body",
+    protects: "Keeps workers visible and their clothing protected on the job.",
     image: "assets/img/photos/worker-hivis.webp", focus: "42% 46%", zoom: 1.35,
     art: "assets/img/illustrations/ppe-vest.svg",
     items: [
-      { id: "vests", name: "Reflective Safety Vests", desc: "Hi-vis vests with reflective strips." },
-      { id: "hivis-jackets", name: "Hi-Vis Jackets & Shirts", desc: "High-visibility outerwear for site and road work." },
-      { id: "coveralls", name: "Coveralls & Overalls", desc: "Full-body workwear for site and industrial use." },
-      { id: "disposable-coveralls", name: "Disposable Protective Coveralls", desc: "Single-use suits against dust and contamination." }
+      { id: "vests", name: "Reflective Vests", desc: "Hi-vis vests with reflective strips." },
+      { id: "overalls", name: "Overalls", desc: "Full-body workwear for site and industrial use." },
+      { id: "overcoats", name: "Overcoats", desc: "Work coats worn over clothing to keep it clean and protected." }
     ]
   },
   {
@@ -89,19 +89,18 @@ window.SA_CATALOG = [
     image: "assets/img/photos/worker-harness.webp", focus: "70% 56%", zoom: 1.5,
     art: "assets/img/illustrations/ppe-fall.svg",
     items: [
-      { id: "harnesses", name: "Full-Body Harnesses", desc: "Harnesses that spread fall-arrest forces across the body." },
-      { id: "lanyards", name: "Lanyards & Snap Hooks", desc: "Connectors that link the harness to an anchor point." }
+      { id: "harnesses", name: "Safety Harnesses", desc: "Full-body harnesses for work at height." },
+      { id: "lanyards", name: "Lanyards", desc: "Connectors that link the harness to an anchor point." }
     ]
   },
   {
-    id: "healthcare", no: "09", name: "Healthcare & Hygiene PPE", zone: null,
-    protects: "Protection for clinical, laboratory and hygiene settings.",
-    image: "assets/img/photos/healthcare-ppe.webp", focus: "55% 50%", zoom: 1.15,
-    art: null,
+    id: "fire", no: "09", name: "Fire Safety", zone: null,
+    protects: "Equipment to detect and fight fire in the workplace.",
+    image: null,
+    art: "assets/img/illustrations/fire-extinguisher.svg", artFirst: true,
     items: [
-      { id: "surgical-masks", name: "Surgical Face Masks", desc: "Disposable masks for clinical and hygiene use." },
-      { id: "exam-gloves", name: "Nitrile Examination Gloves", desc: "Disposable gloves for clinical and food-handling tasks." },
-      { id: "isolation-gowns", name: "Isolation Gowns", desc: "Disposable gowns for barrier protection." }
+      { id: "fire-extinguishers", name: "Fire Extinguishers", desc: "Portable extinguishers for workplaces and facilities." },
+      { id: "fire-alarms", name: "Fire Alarms", desc: "Alarms that warn people of fire so they can get out safely." }
     ]
   }
 ];

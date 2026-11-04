@@ -16,9 +16,11 @@ A fast, static website (HTML, CSS, JavaScript; no build step), ready for Netlify
 Double-click `public/index.html`. Everything works locally; forms show a "preview mode" note and only send once the site is on Netlify.
 
 ## Update company details (one file)
-Open `public/assets/js/config.js` and replace the placeholders marked `TODO`:
-phone numbers, WhatsApp, the five email addresses, address, P.O. Box, office hours, registration no., TIN,
-directors (names, titles, short profiles), social links and industries served. Every page updates automatically.
+Open `public/assets/js/config.js`: phone, WhatsApp, the five company email addresses, address, P.O. Box,
+office hours, registration no., directors (names, titles, short profiles, company emails), areas served,
+industries served and social links (add them when the accounts exist). Every page updates automatically.
+Kept off the website on purpose: TIN, trading licence, directors' personal phones and personal emails
+(the TIN and licence appear in the Business Profile only).
 
 ## Update the PPE range
 Open `public/assets/js/catalog.js`. Each category has a name, description, photo and a list of items.
@@ -57,7 +59,7 @@ First time (in the VS Code terminal, inside this folder):
 git init -b main
 git add .
 git commit -m "Safe Armor website: first version"
-git remote add origin https://github.com/YOUR-USERNAME/safe-armor-website.git
+git remote add origin https://github.com/AGmain101/safe-armor-website.git
 git push -u origin main
 ```
 Every update after that:

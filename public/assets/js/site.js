@@ -74,8 +74,14 @@
       if (!CFG.directors || !CFG.directors.length) return;
       w.innerHTML = CFG.directors.map(function (p, i) {
         return '<article class="director" data-reveal><div class="director__top"><img class="director__mark" src="' + asset("assets/img/illustrations/shield-lines.svg") + '" alt=""><div class="director__n">' + pad(i + 1) +
-          "</div><h3>" + esc(p.name) + '</h3><div class="director__role">' + esc(p.title) + '</div></div><div class="director__body"><p>' + esc(p.bio) + "</p></div></article>";
+          "</div><h3>" + esc(p.name) + '</h3><div class="director__role">' + esc(p.title) + '</div></div><div class="director__body"><p>' + esc(p.bio) + "</p>" +
+          (p.email ? '<a class="director__mail" href="mailto:' + esc(p.email) + '">' + icon("mail") + esc(p.email) + "</a>" : "") + "</div></article>";
       }).join("");
+    });
+    $$("[data-areas]").forEach(function (w) {
+      var list = CFG.areas || [];
+      if (!list.length) { (w.closest(".reach__col") || w).hidden = true; return; }
+      w.innerHTML = list.map(function (a, i) { return '<span class="town"><b>' + pad(i + 1) + "</b>" + esc(a) + "</span>"; }).join("");
     });
     $$("[data-industries]").forEach(function (w) {
       var list = CFG.industries || [];
