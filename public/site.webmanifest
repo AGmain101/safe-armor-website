@@ -1,0 +1,15 @@
+{
+  "name": "Safe Armor PPE Supplies UG Ltd",
+  "short_name": "Safe Armor",
+  "description": "Personal protective equipment supplier — Your Safety, Our Priority.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#070F1A",
+  "theme_color": "#070F1A",
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

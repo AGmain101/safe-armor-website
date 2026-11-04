@@ -1,0 +1,22 @@
+# Netlify configuration — Safe Armor website
+# The website lives in /public. Functions (optional backend) live in /netlify/functions.
+# No build command: the site is plain HTML/CSS/JS.
+
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Fonts never change: cache them for a year.
+# Everything else uses Netlify's default (always re-checked), so updates show immediately.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
