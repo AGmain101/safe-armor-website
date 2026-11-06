@@ -480,6 +480,7 @@ body::after {
 .chip .ico { width: 14px; height: 14px; }
 .chip:hover { border-color: var(--amber); }
 .chip.is-added { background: var(--amber); color: var(--navy-900); border-color: var(--amber); }
+.chip--more { text-decoration: none; border-style: dashed; color: var(--amber); }
 .zone-card__foot { margin-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .zone-card.swap .zone-card__media img.photo { opacity: 0; transform: scale(1.08); }
 .zone-card.swap .zone-card__body > * { opacity: 0; transform: translateY(10px); }

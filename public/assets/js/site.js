@@ -559,10 +559,11 @@
       var art = $(".art", media); if (c.art) { art.src = asset(c.art); art.hidden = false; } else art.hidden = true;
       $("h3", bodyEl).textContent = c.name;
       $("p", bodyEl).textContent = c.protects;
-      $(".zone-card__items", bodyEl).innerHTML = c.items.map(function (it) {
+      var shown = c.items.slice(0, 6), more = c.items.length - shown.length;
+      $(".zone-card__items", bodyEl).innerHTML = shown.map(function (it) {
         var key = c.id + ":" + it.id;
         return '<button class="chip" type="button" data-add="' + key + '" aria-pressed="false">' + icon("plus") + esc(it.name) + "</button>";
-      }).join("");
+      }).join("") + (more > 0 ? '<a class="chip chip--more" href="' + BASE + "products.html#cat-" + c.id + '">+' + more + " more</a>" : "");
       $(".zone-card__foot a", bodyEl).setAttribute("href", BASE + "products.html#cat-" + c.id);
       updateCounts();
     }
